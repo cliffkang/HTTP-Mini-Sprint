@@ -27,10 +27,10 @@ class FriendsList extends Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:5000/friends')
+      .get('http://localhost:5000/friends') //promises
       .then((response) => {
         const friends = response.data;
-        this.setState({ friends: friends })
+        this.setState({ friends: friends });
       })
       .catch((error) => {
         console.log('there was error', error);
